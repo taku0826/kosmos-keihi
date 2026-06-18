@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OGP Source — コスモス経費メモ帳</title>
+<style>
+  /* このファイルは OGP 画像生成専用。1200×630px でスクリーンショット → ogp.png として保存 */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    font-family: "Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","Noto Sans JP","Meiryo",sans-serif;
+  }
+  body {
+    background: linear-gradient(150deg, #1B2A4A 0%, #11203B 100%);
+    display: flex;
+    align-items: center;
+    padding: 60px 80px;
+    gap: 60px;
+  }
+  .left {
+    flex: 1;
+  }
+  .badge {
+    display: inline-block;
+    background: rgba(208, 78, 106, 0.25);
+    color: #E8758A;
+    border: 1px solid #E8758A;
+    border-radius: 999px;
+    font-size: 14px;
+    padding: 5px 16px;
+    letter-spacing: .08em;
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 52px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+    letter-spacing: .06em;
+    margin-bottom: 10px;
+  }
+  h1 .flower { color: #E8758A; }
+  .subtitle {
+    font-size: 22px;
+    color: rgba(255,255,255,0.75);
+    letter-spacing: .04em;
+    margin-bottom: 36px;
+  }
+  .features {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .feat {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    color: rgba(255,255,255,0.88);
+  }
+  .feat-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #D04E6A;
+    flex-shrink: 0;
+  }
+  .right {
+    width: 280px;
+    flex-shrink: 0;
+  }
+  .card {
+    background: #FDEEF1;
+    border-radius: 16px;
+    padding: 30px 26px;
+    border-top: 6px solid #D04E6A;
+  }
+  .card-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1B2A4A;
+    letter-spacing: .1em;
+    margin-bottom: 16px;
+    border-left: 3px solid #D04E6A;
+    padding-left: 8px;
+  }
+  .bars {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .bar-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .bar-label {
+    font-size: 12px;
+    color: #6B7280;
+    display: flex;
+    justify-content: space-between;
+  }
+  .bar-track {
+    background: #F7F8F6;
+    border-radius: 4px;
+    height: 10px;
+    overflow: hidden;
+  }
+  .bar-fill {
+    height: 100%;
+    background: #E8758A;
+    border-radius: 4px;
+  }
+  .total-line {
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1px solid #E8758A;
+    text-align: center;
+  }
+  .total-label { font-size: 12px; color: #6B7280; margin-bottom: 4px; }
+  .total-val { font-size: 28px; font-weight: 700; color: #D04E6A; }
+
+  .footer-bar {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: rgba(0,0,0,0.25);
+    padding: 14px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand-name {
+    font-size: 16px;
+    color: rgba(255,255,255,0.65);
+    letter-spacing: .15em;
+  }
+  .badges-row {
+    display: flex;
+    gap: 10px;
+  }
+  .pill {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 999px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.75);
+    padding: 4px 12px;
+    letter-spacing: .05em;
+  }
+</style>
+</head>
+<body>
+
+  <div class="left">
+    <div class="badge">花シリーズ 第六号</div>
+    <h1>🌸 コスモス<br>経費メモ帳</h1>
+    <div class="subtitle">フリーランスの経費をブラウザだけで管理</div>
+    <div class="features">
+      <div class="feat"><div class="feat-dot"></div>カテゴリ別バーグラフで使いすぎをひと目確認</div>
+      <div class="feat"><div class="feat-dot"></div>月別絞り込み・CSV書き出しで確定申告にそのまま</div>
+      <div class="feat"><div class="feat-dot"></div>データはブラウザの中だけ — 外には出ない</div>
+      <div class="feat"><div class="feat-dot"></div>登録不要・完全無料</div>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="card">
+      <div class="card-title">カテゴリ別集計</div>
+      <div class="bars">
+        <div class="bar-row">
+          <div class="bar-label"><span>通信費</span><span>¥18,000</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label"><span>交通費</span><span>¥12,400</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:69%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label"><span>消耗品費</span><span>¥8,800</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:49%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label"><span>新聞図書費</span><span>¥4,320</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:24%"></div></div>
+        </div>
+      </div>
+      <div class="total-line">
+        <div class="total-label">今月の合計</div>
+        <div class="total-val">¥43,520</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <div class="brand-name">すみれ堂</div>
+    <div class="badges-row">
+      <div class="pill">登録不要</div>
+      <div class="pill">完全無料</div>
+      <div class="pill">データ送信なし</div>
+    </div>
+  </div>
+
+</body>
+</html>
+<!--
+スクリーンショット手順:
+  node -e "const p=require('puppeteer');(async()=>{const b=await p.launch();const pg=await b.newPage();await pg.setViewport({width:1200,height:630});await pg.goto('file://$(pwd)/ogp-source.html');await pg.screenshot({path:'ogp.png'});await b.close();})()"
+
+または Chrome で開き、DevTools → Device Toolbar → 1200×630 でスクリーンショット → ogp.png として保存
+kosmos-keihi/ ディレクトリに配置する
+-->
